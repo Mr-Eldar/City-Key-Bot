@@ -78,5 +78,5 @@ async def get_history_at_bid_user():
     for problem in problems:
         keyboard.add(InlineKeyboardButton(text=problem.description,
                                           callback_data=f'history_at_bid_{problem.problem_category_id}'))
-    keyboard.row(InlineKeyboardButton(text='Назад ⬅️', callback_data='history_bid'))
+    keyboard.row(InlineKeyboardButton(text='Назад ⬅️', callback_data='profile'))
     return keyboard.adjust(1).as_markup()
