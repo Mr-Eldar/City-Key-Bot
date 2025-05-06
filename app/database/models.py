@@ -8,8 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncAttrs, async_sessionmaker, create_async_
 
 load_dotenv()
 
-engine = create_async_engine(url=os.getenv('DB_URL'),
-                             echo=True)
+engine = create_async_engine(url=os.getenv('DB_URL'))
 
 async_session = async_sessionmaker(engine)
 
