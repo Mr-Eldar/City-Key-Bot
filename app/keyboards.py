@@ -56,7 +56,7 @@ async def btns_report_problems(category_id):
 async def profile(user):
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text='Изменить профиль ✏️', callback_data=f'editprofile_{user.id}')],
-        [InlineKeyboardButton(text='Мои заявки 📝', callback_data=f'history_bid')],
+        [InlineKeyboardButton(text='Мои заявки 📝', callback_data='history_bid')],
         [InlineKeyboardButton(text='Уведомления 🔔', callback_data='push_notifications')]
     ])
 
@@ -78,4 +78,5 @@ async def get_history_at_bid_user():
     for problem in problems:
         keyboard.add(InlineKeyboardButton(text=problem.description,
                                           callback_data=f'history_at_bid_{problem.problem_category_id}'))
+    keyboard.row(InlineKeyboardButton(text='Назад ⬅️', callback_data='history_bid'))
     return keyboard.adjust(1).as_markup()
