@@ -162,8 +162,8 @@ async def cmd_report_problem(event: Message | CallbackQuery, state: FSMContext):
     else:
         if await find_user(event.from_user.id):
             await event.answer()
-            await event.message.delete()
-            await event.message.answer('🚨 <b>Сообщить о проблеме</b>\n\n'
+            # await event.message.delete()
+            await event.message.edit_text('🚨 <b>Сообщить о проблеме</b>\n\n'
                                '<i>Заметили что-то, что нужно исправить?</i>\n'
                                'Расскажите нам, и мы оперативно решим проблему!\n\n'
                                '▫️▫️▫️▫️▫️▫️▫️▫️▫️\n\n'
