@@ -25,10 +25,12 @@ edit_profile = InlineKeyboardMarkup(inline_keyboard=[
 
 on_notifications = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Получать уведомления ✅', callback_data='on_notifications')]
+    [InlineKeyboardButton(text='Назад ⬅️', callback_data='profile')]
 ])
 
 off_notifications = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Отключить уведомления ❌', callback_data='off_notifications')]
+    [InlineKeyboardButton(text='Назад ⬅️', callback_data='profile')]
 ])
 
 admin_panel = InlineKeyboardMarkup(inline_keyboard=[
